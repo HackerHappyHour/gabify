@@ -1,0 +1,13 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.define "docker-host" do |docker|
+    docker.vm.box = "ubuntu/trusty64"
+    docker.vm.provider "virtualbox" do |vb|
+      vb.linked_clone = true
+    end
+
+    docker.vm.provision "docker"
+  end
+end
