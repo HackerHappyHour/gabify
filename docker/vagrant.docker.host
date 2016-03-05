@@ -1,0 +1,14 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.define "docker-host" do |d|
+    config.vm.box = "centos/atomic-host"
+
+    config.vm.provider "virtualbox" do |vb|
+      vb.linked_clone = "true"
+    end
+
+  end
+
+end
