@@ -8,7 +8,7 @@ To set up your developer machine, use brew to install deps, then you're ready to
 `vagrant up`:
 
 ```bash
-brew install vagrant
+brew cask install vagrant
 brew cask install virtualbox
 vagrant up
 ```
