@@ -13,4 +13,10 @@ Vagrant.configure(2) do |config|
       end
   end
 
+  config.vm.define "rethink" do |rethink|
+    rethink.vm.provider "docker" do |docker|
+      docker.image = "rethinkdb:2.2"
+    end
+  end
+
 end
