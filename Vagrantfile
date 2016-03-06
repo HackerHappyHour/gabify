@@ -2,8 +2,28 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
+
+  config.vm.define "docker-host" do |docker|
+
+    docker.vm.box = "LongLiveCHIEF/minimal-centos-7"
+    docker.vm.network "private_network", ip: "192.168.39.39"
+
+    docker.vm.provider "virtualbox" do |vb|
+      vb.linked_clone = true
+    end
+
+    docker.vm.provision "file",
+      source: "vagrant/docker.repo",
+      destination: "/tmp/docker.repo"
+
+    docker.vm.provision "shell",
+      path: "vagrant/docker.sh",
+      privileged: true
+
+  end
+
   config.vm.provider "docker" do |dock|
-      dock.vagrant_vagrantfile = "./docker/Vagrantfile"
+      dock.vagrant_vagrantfile = "./Vagrantfile"
       dock.vagrant_machine = "docker-host"
   end
 
