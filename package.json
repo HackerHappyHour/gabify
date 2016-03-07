@@ -1,6 +1,6 @@
 {
   "name": "@h3/impact",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Org-friendly team chat",
   "main": "index.js",
   "repository": {
