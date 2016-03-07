@@ -1,11 +1,8 @@
 {
-  "name": "impact",
-  "version": "1.0.0",
+  "name": "@h3/impact",
+  "version": "0.0.0",
   "description": "Org-friendly team chat",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HackerHappyHour/impact.git"
@@ -13,14 +10,26 @@
   "keywords": [
     "team",
     "chat",
-    "enterprise"
+    "enterprise",
+    "communication",
+    "collaboration"
   ],
-  "author": "Chris Jaynes (chris@jaynes.me)",
+  "author": "Chris Jaynes <chris@jaynes.me> (https://github.com/geekytime)",
+  "contributors":["Brian Vanderbusch <brian@hackerhappyhour.com> (https://github.com/LongLiveCHIEF)"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/HackerHappyHour/impact/issues"
   },
   "homepage": "https://github.com/HackerHappyHour/impact#readme",
+  "analyze": true,
+  "cpu":["x64"],
+  "engines":{
+    "npm": "~3.3",
+    "node": "~5.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
   "devDependencies": {
     "eslint": "~2.3.0",
     "mocha": "~2.4.5",
