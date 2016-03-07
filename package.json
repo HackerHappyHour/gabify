@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "Org-friendly team chat",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HackerHappyHour/impact.git"
@@ -26,13 +23,27 @@
     "url": "https://github.com/HackerHappyHour/impact/issues"
   },
   "homepage": "https://github.com/HackerHappyHour/impact#readme",
+  "engines": {
+    "node": "~5.3",
+    "npm": "~3.3"
+  },
+  "analyze": true,
   "devDependencies": {
     "eslint": "~2.3.0",
+    "jsdoc": "^3.4.0",
     "mocha": "~2.4.5",
     "webpack": "~1.12.14"
   },
   "dependencies": {
     "hapi": "^13.0.0",
     "rethinkdb": "~2.2.2"
+  },
+  "config": {
+    "host": "localhost",
+    "port": "8055"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node ./index.js"
   }
 }
