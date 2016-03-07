@@ -21,6 +21,12 @@
     "url": "https://github.com/HackerHappyHour/impact/issues"
   },
   "homepage": "https://github.com/HackerHappyHour/impact#readme",
+  "analyze": true,
+  "cpu":["x64"],
+  "engines":{
+    "npm": "~3.3",
+    "node": "~5.3"
+  },
   "scripts": {
     "test": "mocha"
   },
