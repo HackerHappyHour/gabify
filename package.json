@@ -15,7 +15,8 @@
     "chat",
     "enterprise"
   ],
-  "author": "Chris Jaynes (chris@jaynes.me)",
+  "author": "Chris Jaynes <chris@jaynes.me> (https://github.com/geekytime)",
+  "contributors":["Brian Vanderbusch <brian@hackerhappyhour.com> (https://github.com/LongLiveCHIEF)"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/HackerHappyHour/impact/issues"
