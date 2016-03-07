@@ -14,12 +14,33 @@ server.connection({
   port: process.env.npm_package_config_port
 });
 
-server.route({
-  method: 'GET',
-  path: '/{name}',
-  handler: (request, reply) => {
-    reply(`hello ${request.params.name}!`)
-  }
-})
+var goodOptions = {
+    reporters:[{
+      reporter: require("good-console"),
+      events: {
+        log: '*',
+        response: '*'
+      }
+    }]
+};
 
-server.start(() => console.log('Started at:', server.info.uri))
+server.register({
+  register: require('good'),
+  options: goodOptions
+}, function(err){
+
+  if (err){
+    throw err;
+  }
+
+  server.route({
+    method: 'GET',
+    path: '/{name}',
+    handler: (request, reply) => {
+      reply(`hello ${request.params.name}`)
+    }
+  })
+
+});
+
+server.start(() => console.log(`Started at: ${server.info.uri}`));
