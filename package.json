@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "start": "node ./index.js",
     "test": "mocha"
   },
   "repository": {
@@ -27,12 +28,26 @@
     "url": "https://github.com/HackerHappyHour/impact/issues"
   },
   "homepage": "https://github.com/HackerHappyHour/impact#readme",
+  "engines": {
+    "node": "~5.3",
+    "npm": "~3.3"
+  },
+  "analyze": true,
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "~2.3.0",
+    "jsdoc": "^3.4.0",
     "mocha": "~2.4.5",
     "webpack": "~1.12.14"
   },
   "dependencies": {
+    "good": "^6.6.0",
+    "good-console": "^5.3.1",
+    "hapi": "^13.0.0",
     "rethinkdb": "~2.2.2"
+  },
+  "config": {
+    "host": "localhost",
+    "port": "8055"
   }
 }
