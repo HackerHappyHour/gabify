@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "pre-commit": "npm run lint && npm run test",
     "test": "mocha"
   },
   "repository": {
@@ -29,10 +30,16 @@
   "homepage": "https://github.com/HackerHappyHour/impact#readme",
   "devDependencies": {
     "eslint": "~2.3.0",
+    "ghooks": "~1.0.3",
     "mocha": "~2.4.5",
     "webpack": "~1.12.14"
   },
   "dependencies": {
     "rethinkdb": "~2.2.2"
+  },
+  "config":{
+    "ghooks":{
+      "pre-commit": "npm run pre-commit"
+    }
   }
 }
