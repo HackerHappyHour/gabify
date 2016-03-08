@@ -4,6 +4,7 @@
   "description": "Org-friendly team chat",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "mocha"
   },
   "repository": {
