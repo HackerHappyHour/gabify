@@ -1,2 +1,2 @@
 --require ./test/common.js
---runner spec
+--reporter spec
