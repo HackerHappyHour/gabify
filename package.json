@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/HackerHappyHour/impact#readme",
   "devDependencies": {
+    "chai": "~3.5.0",
     "eslint": "~2.3.0",
     "mocha": "~2.4.5",
     "webpack": "~1.12.14"
