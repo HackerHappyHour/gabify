@@ -14,7 +14,8 @@ To set up your developer machine, use brew to install deps, then you're ready to
 ```bash
 brew cask install vagrant
 brew cask install virtualbox
-vagrant up --no-parallel
+vagrant up docker-host --provider virtualbox
+vagrant up
 ```
 
 Note: At this time, we only support build setup instructions for Mac and the

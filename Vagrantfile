@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.define "docker-host", primary:true do |docker|
+  config.vm.define "docker-host", primary:true, autostart: false do |docker|
 
     docker.vm.box = "LongLiveCHIEF/minimal-centos-7"
     docker.vm.network "private_network", ip: "192.168.39.39"
