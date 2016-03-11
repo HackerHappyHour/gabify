@@ -4,7 +4,7 @@ Org friendly chat
 
 ## Development Setup
 
-This project uses [vagrant](vagrantup.com) to spin up a local test environment to simulate the
+This project uses [vagrant](http://vagrantup.com) to spin up a local test environment to simulate the
 components enterprises would bring to their own implementations (such as an ldap)
 server.
 
