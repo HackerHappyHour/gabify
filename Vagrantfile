@@ -30,7 +30,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "ldap-server" do |ldap|
       ldap.vm.provider "docker" do |docker|
-        docker.image = "nickstenning/slapd"
+        docker.build_dir = "./docker/ldap"
+        docker.ports = ["389:389"]
       end
   end
 
