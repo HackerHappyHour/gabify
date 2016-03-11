@@ -7,6 +7,7 @@ Vagrant.configure(2) do |config|
 
     docker.vm.box = "LongLiveCHIEF/minimal-centos-7"
     docker.vm.network "private_network", ip: "192.168.39.39"
+    docker.vm.network "forwarded_port", host: 8080, guest: 8080
 
     docker.vm.provider "virtualbox" do |vb|
       vb.linked_clone = true
@@ -36,6 +37,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "rethink" do |rethink|
     rethink.vm.provider "docker" do |docker|
       docker.image = "rethinkdb:2.2"
+      docker.ports = ["8080:8080", "28015:28015", "29015:29015"]
     end
   end
 
