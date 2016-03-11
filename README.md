@@ -17,6 +17,10 @@ brew cask install virtualbox
 vagrant up docker-host --provider virtualbox
 vagrant up
 ```
+### Access Rethink Management Console
+
+After running the 2-step `vagrant up`, you can now access your RethinkDB web
+console by visiting [http://192.168.39.39:8080]() in your browser.
 
 Note: At this time, we only support build setup instructions for Mac and the
 virtualbox provider for Vagrant. We are accepting pull requests for Windows and
