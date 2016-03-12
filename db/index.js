@@ -1,5 +1,11 @@
 var r = require('rethinkdb');
-r.connect({ host: '192.168.39.39', port: 28015 }, function(err, conn) {
-  if (err) throw err;
-  console.log("connection: ", conn);
-});
+
+var db = function connectRethinkDB(config){
+
+  r.connect({ host: config.host, port: config.port }, function(err, conn) {
+    if (err) throw err;
+    console.log("connection: ", conn);
+  });
+}
+
+module.exports = db;
