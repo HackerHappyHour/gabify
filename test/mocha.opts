@@ -1,3 +1,2 @@
 --require ./test/common.js
 --reporter spec
---recursive
