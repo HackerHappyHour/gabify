@@ -1,6 +1,7 @@
 var Hapi = require('hapi');
-var server = new Hapi.Server();
+var Config = ('../lib/config');
 
+var server = new Hapi.Server();
 /**
 * `host` and `port` are pulled from `package.json`'s config keys,
 * and can be overridden one of 4 ways:
@@ -10,8 +11,8 @@ var server = new Hapi.Server();
 *    - add a command line param `node ./index.js --port 80`
 **/
 server.connection({
-  host: process.env.npm_package_config_host,
-  port: process.env.npm_package_config_port
+  host: Config.ip,
+  port: Config.port
 });
 
 module.exports = server;

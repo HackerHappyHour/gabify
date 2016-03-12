@@ -1,5 +1,5 @@
+var Config = require("./lib/config");
 var server = require('./server');
-var db = require('./db');
 var db = require('./db');
 var routes = require('./server/routes');
 var logs = require('./server/logs');
