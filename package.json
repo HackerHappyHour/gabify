@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "pre-commit": "npm run lint && npm run test",
     "start": "node ./index.js --port 8000",
     "test": "mocha"
   },
@@ -36,6 +37,7 @@
   "devDependencies": {
     "chai": "~3.5.0",
     "eslint": "~2.3.0",
+    "ghooks": "~1.0.3",
     "jsdoc": "^3.4.0",
     "mocha": "~2.4.5",
     "webpack": "~1.12.14"
@@ -48,8 +50,9 @@
     "inert": "^3.2.0",
     "rethinkdb": "~2.2.2"
   },
-  "config": {
-    "host": "localhost",
-    "port": "8055"
+  "config":{
+    "ghooks":{
+      "pre-commit": "npm run pre-commit"
+    }
   }
 }
