@@ -1,12 +1,12 @@
 module.exports = function(server){
   var goodOptions = {
-      reporters:[{
-        reporter: require("good-console"),
-        events: {
-          log: '*',
-          response: '*'
-        }
-      }]
+    reporters:[{
+      reporter: require("good-console"),
+      events: {
+        log: '*',
+        response: '*'
+      }
+    }]
   };
 
   server.register({
