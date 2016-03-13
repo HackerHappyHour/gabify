@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "start": "node ./index.js",
+    "start": "node ./index.js --port 8000",
     "test": "mocha"
   },
   "repository": {
@@ -45,6 +45,7 @@
     "good": "^6.6.0",
     "good-console": "^5.3.1",
     "hapi": "^13.0.0",
+    "inert": "^3.2.0",
     "rethinkdb": "~2.2.2"
   },
   "config": {

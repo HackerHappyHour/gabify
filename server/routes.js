@@ -1,12 +1,20 @@
+var inert = require('inert');
 
 module.exports = function(server){
 
-  server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: (request, reply) => {
-      reply(`hello ${request.params.name}`)
+  server.register(inert, function(err){
+
+    if(err){
+      throw err;
     }
+
+    server.route({
+      method: 'GET',
+      path: '/',
+      handler: function(request, reply){
+        reply.file(`index.html`);
+      }
+    });
+
   });
-  
 };
