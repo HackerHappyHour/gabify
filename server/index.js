@@ -1,5 +1,7 @@
 var Hapi = require('hapi');
-var Config = ('../lib/config');
+var Config = require('../lib/config');
+var routes = require('./routes');
+var logs = require('./logs');
 
 var server = new Hapi.Server();
 /**
@@ -14,5 +16,8 @@ server.connection({
   host: Config.ip,
   port: Config.port
 });
+
+logs(server);
+routes(server);
 
 module.exports = server;
