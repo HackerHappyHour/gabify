@@ -4,7 +4,7 @@
   "description": "Org-friendly team chat",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --watch",
+    "build": "webpack",
     "lint": "eslint .",
     "pre-commit": "npm run lint && npm run test",
     "start": "node ./index.js --port 8000",
