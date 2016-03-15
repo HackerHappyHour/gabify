@@ -1,4 +1,5 @@
 var inert = require('inert');
+var Path = require('path');
 
 module.exports = function(server){
 
@@ -10,9 +11,13 @@ module.exports = function(server){
 
     server.route({
       method: 'GET',
-      path: '/',
-      handler: function(request, reply){
-        reply.file(`index.html`);
+      path: '/{path*}',
+      handler: {
+        directory:{
+          path: Path.join(__dirname,'../src/app'),
+          listing: false,
+          index: true
+        }
       }
     });
 
