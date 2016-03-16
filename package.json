@@ -4,6 +4,7 @@
   "description": "Org-friendly team chat",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "lint": "eslint .",
     "pre-commit": "npm run lint && npm run test",
     "start": "node ./index.js --port 8000",
@@ -35,23 +36,29 @@
   },
   "analyze": true,
   "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.7.2",
+    "babel-loader": "^6.2.4",
     "chai": "~3.5.0",
     "eslint": "~2.3.0",
     "ghooks": "~1.0.3",
     "jsdoc": "^3.4.0",
     "mocha": "~2.4.5",
-    "webpack": "~1.12.14"
+    "webpack": "^1.12.14"
   },
   "dependencies": {
+    "@cycle/core": "^6.0.3",
+    "@cycle/dom": "^9.1.0",
     "convict": "~1.1.2",
     "good": "^6.6.0",
     "good-console": "^5.3.1",
     "hapi": "^13.0.0",
     "inert": "^3.2.0",
-    "rethinkdb": "~2.2.2"
+    "rethinkdb": "~2.2.2",
+    "rx": "^4.1.0"
   },
-  "config":{
-    "ghooks":{
+  "config": {
+    "ghooks": {
       "pre-commit": "npm run pre-commit"
     }
   }
